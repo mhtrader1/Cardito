@@ -96,6 +96,25 @@
     input[type="email"]{width:100%;background:#0e151c;border:1px solid #243140;border-radius:10px;padding:12px;color:var(--text)}
     form.inline{display:flex;gap:10px;flex-wrap:wrap}
     .hide{display:none!important}
+    /* Light theme overrides */
+    html[data-theme="light"]{
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --text:#0b0f14;
+      --muted:#556170;
+      --gold:#c89b00;
+      --accent:#0b84a5;
+      --success:#1e8e3e;
+      --danger:#c0392b;
+      --shadow:0 8px 24px rgba(0,0,0,.08);
+    }
+    html[data-theme="light"] body{background:var(--bg);color:var(--text)}
+    html[data-theme="light"] a{color:var(--accent)}
+    html[data-theme="light"] .card{background:var(--card);border:1px solid #e6ecf3;box-shadow:var(--shadow)}
+    html[data-theme="light"] .btn-muted{background:#eef2f7;color:var(--text);border-color:#d4dbe7}
+    html[data-theme="light"] .pill{background:#eef2f7;border-color:#d4dbe7}
+    html[data-theme="light"] .badge{background:#f2f6fb;border-color:#e6ecf3}
+    html[data-theme="light"] .timeline::before{background:#e6ecf3}
     .error{color:var(--danger)}
     .ok{color:var(--success)}
     @media (max-width:980px){
@@ -103,7 +122,16 @@
       .grid-3{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
       .cols{grid-template-columns:1fr}
-      .logo-img{height:72px}
+    
+      /* Mobile header layout fix */
+      header{flex-direction:column;align-items:flex-start}
+      nav{width:100%;margin-top:10px;gap:8px;flex-wrap:wrap}
+    
+      /* Smaller pills on mobile */
+      .btn{padding:10px 14px;font-size:.95rem}
+    
+      /* Logo a bit smaller on phones */
+      .logo-img{height:56px}
     }
   </style>
 
@@ -137,9 +165,10 @@
     <!-- Header -->
     <header>
       <a class="brand" href="/" aria-label="Cardito home">
-        <img src="/logo.png" alt="Cardito logo" class="logo-img" />
+        <img id="site-logo" src="/logo.png" alt="Cardito logo" class="logo-img" />
       </a>
       <nav>
+        <button class="btn btn-ghost" id="theme-toggle" type="button" aria-label="Toggle theme">🌙 / ☀️</button>
         <a class="btn btn-ghost" href="#features">Features</a>
         <a class="btn btn-ghost" href="#roadmap">Roadmap</a>
         <a class="btn btn-ghost" href="#faq">FAQ</a>
@@ -327,6 +356,36 @@
   </div>
 
   <script>
+    /* Theme: init + toggle (dark default, follows system if no choice) */
+    (function(){
+      const KEY='cardito-theme';
+      const mql = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)');
+      const saved = localStorage.getItem(KEY);
+      const initial = saved ? saved : (mql && mql.matches ? 'light' : 'dark');
+      applyTheme(initial);
+    
+      const btn=document.getElementById('theme-toggle');
+      if(btn){
+        btn.addEventListener('click', ()=>{
+          const next = (document.documentElement.getAttribute('data-theme')==='light')?'dark':'light';
+          applyTheme(next);
+          localStorage.setItem(KEY,next);
+        });
+      }
+      if(mql && !saved){
+        mql.addEventListener('change', (e)=>applyTheme(e.matches?'light':'dark'));
+      }
+    
+      function applyTheme(t){
+        document.documentElement.setAttribute('data-theme', t);
+        const logo=document.getElementById('site-logo');
+        if(logo){ logo.src = t==='light' ? '/logo1.png' : '/logo.png'; }
+        const meta=document.querySelector('meta[name="theme-color"]');
+        if(meta){ meta.setAttribute('content', t==='light' ? '#f7f9fc' : '#0b0f14'); }
+        const btn=document.getElementById('theme-toggle');
+        if(btn){ btn.textContent = t==='light' ? '🌙' : '☀️'; }
+      }
+    })();
     // Year
     document.getElementById('y').textContent = new Date().getFullYear();
 
