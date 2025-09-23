@@ -57,7 +57,7 @@
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
     /* show full logo image, no circular crop */
-    .logo-img{height:120px;width:auto;object-fit:contain;border-radius:0;box-shadow:none}
+    .logo-img{height:100px;width:auto;object-fit:contain;border-radius:0;box-shadow:none}
     /* legacy class (not used for image now) */
     .logo{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #ffd666, #b8860b 55%, #6d4c00 100%);display:inline-grid;place-items:center;box-shadow:var(--shadow)}
     .logo span{font-weight:900;color:#000;filter:drop-shadow(0 1px 1px rgba(255,255,255,.35))}
@@ -71,7 +71,7 @@
     .section{padding:40px 0}
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
     .card{background:var(--card);border:1px solid #1b2633;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
-    .card-bg{background:linear-gradient(rgba(11,15,20,.6),rgba(11,15,20,.6)),url('/background.png') center/cover no-repeat;border:none;box-shadow:var(--shadow);background-color:transparent}
+    .card-bg{background:linear-gradient(rgba(11,15,20,.5),rgba(11,15,20,.5)),url('/background.png') center/cover no-repeat;border:none;box-shadow:var(--shadow);background-color:transparent}
     h1{font-size:clamp(28px,3.2vw,46px);line-height:1.15;margin:0 0 10px}
     h1 .accent{color:var(--gold)}
     h2{font-size:clamp(22px,2.2vw,30px);margin:0 0 12px}
@@ -120,8 +120,11 @@
     html[data-theme="light"] .badge{background:#f2f6fb;border-color:#e6ecf3}
     html[data-theme="light"] p.lead{color:#2b3440}
     html[data-theme="light"] .card-bg{
-      background:linear-gradient(rgba(247,249,252,.85),rgba(247,249,252,.85)),url('/background.png') center/cover no-repeat;
-      border:none;box-shadow:var(--shadow);
+      background:
+        linear-gradient(rgba(247,249,252,.45),rgba(247,249,252,.45)),
+        url('/background.png') center/cover no-repeat;
+      border:1px solid #e6ecf3;
+      box-shadow:var(--shadow);
     }
     .error{color:var(--danger)}
     .ok{color:var(--success)}
@@ -139,7 +142,7 @@
       .btn{padding:10px 14px;font-size:.95rem}
     
       /* Logo a bit smaller on phones */
-      .logo-img{height:56px}
+      .logo-img{height:60px}
     }
   </style>
 
