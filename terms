@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Terms of Use — Cardito</title>
+  <meta name="description" content="Terms of Use for Cardito."/>
+  <link rel="canonical" href="https://cardito.app/terms.html"/>
+  <meta name="theme-color" content="#0b0f14"/>
+  <style>
+    :root{--bg:#0b0f14;--card:#0f151c;--muted:#a4b0be;--text:#ecf0f1;--gold:#f1c40f;--maxw:900px;--radius:16px;}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px}
+    .card{background:var(--card);border:1px solid #1b2633;border-radius:var(--radius);padding:22px}
+    h1{margin:0 0 10px;font-size:clamp(26px,3vw,38px)}
+    h2{margin:22px 0 8px;font-size:clamp(18px,2.2vw,24px)}
+    p,li{color:#dbe2ea;line-height:1.7}
+    a{color:#17a2b8;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .muted{color:var(--muted)}
+    footer{margin-top:18px;color:var(--muted);font-size:.9rem}
+    .back{display:inline-block;margin-top:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Terms of Use</h1>
+      <p class="muted">Effective date: 23 September 2025</p>
+
+      <p>These Terms of Use (“Terms”) govern your access to and use of the Cardito website at <a href="https://cardito.app">cardito.app</a> and related services (the “Services”). By accessing or using the Services, you agree to these Terms. If you do not agree, do not use the Services.</p>
+
+      <h2>1. Eligibility & Accounts</h2>
+      <ul>
+        <li>You must be at least the age of majority in your jurisdiction to use the Services.</li>
+        <li>We may introduce accounts in later releases. You are responsible for the accuracy of your information and for safeguarding your credentials and devices.</li>
+      </ul>
+
+      <h2>2. Gameplay, XP, and Virtual Items</h2>
+      <ul>
+        <li>During Season 0 and beyond, you may earn XP and/or acquire in-game coins and cosmetic items. These are virtual items with no real-world monetary value and are non-transferable except as explicitly enabled within the Services.</li>
+        <li>We may modify, limit, or discontinue virtual items, XP rules, or rewards at any time.</li>
+        <li>Anti-cheat and fair-play rules apply. We may restrict or terminate access for suspected abuse or violations.</li>
+      </ul>
+
+      <h2>3. Payments & Fees</h2>
+      <ul>
+        <li>Some features (e.g., tournament entries or cosmetic items) may require payment. Prices and availability are subject to change.</li>
+        <li>Except where required by law, all purchases are final and non-refundable.</li>
+        <li>If blockchain interactions are supported, network fees and third-party terms apply; you are responsible for wallet security.</li>
+      </ul>
+
+      <h2>4. User Content</h2>
+      <p>You remain the owner of content you submit (e.g., profile names, avatars, messages where applicable). You grant Cardito a worldwide, non-exclusive, royalty-free license to host, store, display, and operate such content solely to provide and improve the Services. You represent that you have all necessary rights to submit the content and that it does not infringe any rights or laws.</p>
+
+      <h2>5. Prohibited Conduct</h2>
+      <ul>
+        <li>Cheating, exploiting bugs, reverse engineering, or interfering with service integrity.</li>
+        <li>Harassment, hate speech, illegal activities, or violating others’ rights.</li>
+        <li>Using the Services where prohibited by law or in violation of sanctions/export controls.</li>
+      </ul>
+
+      <h2>6. Intellectual Property</h2>
+      <p>The Services, including logos, graphics, UI, and software, are protected by intellectual property laws. Except as expressly permitted, you may not copy, modify, distribute, or create derivative works from the Services.</p>
+
+      <h2>7. Disclaimers</h2>
+      <p>The Services are provided “as is” and “as available” without warranties of any kind. To the maximum extent permitted by law, we disclaim all warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement.</p>
+
+      <h2>8. Limitation of Liability</h2>
+      <p>To the maximum extent permitted by law, Cardito and its affiliates will not be liable for any indirect, incidental, special, consequential, or punitive damages, or any loss of profits, data, or goodwill, arising from or related to your use of the Services.</p>
+
+      <h2>9. Indemnification</h2>
+      <p>You agree to indemnify and hold harmless Cardito from any claims, liabilities, damages, losses, and expenses (including reasonable legal fees) arising out of or in any way connected with your use of the Services or your violation of these Terms.</p>
+
+      <h2>10. Termination</h2>
+      <p>We may suspend or terminate access to the Services at any time, with or without notice, including for violations of these Terms or where required by law.</p>
+
+      <h2>11. Changes to the Services and Terms</h2>
+      <p>We may modify or discontinue the Services at any time. We may update these Terms from time to time. Continued use of the Services after updates constitutes acceptance of the new Terms.</p>
+
+      <h2>12. Governing Law & Dispute Resolution</h2>
+      <p>These Terms are governed by the laws of Denmark, without regard to conflict-of-law principles. The exclusive venue for disputes shall be the courts of Copenhagen, Denmark, unless applicable law provides otherwise.</p>
+
+      <h2>13. Contact</h2>
+      <p>Questions? Contact us at <a href="mailto:info@cardito.app">info@cardito.app</a> or <a href="mailto:support@cardito.app">support@cardito.app</a>.</p>
+
+      <a class="back" href="/">← Back to Home</a>
+    </div>
+    <footer>© <span id="y"></span> Cardito</footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
