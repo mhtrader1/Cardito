@@ -71,7 +71,7 @@
     .section{padding:40px 0}
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
     .card{background:var(--card);border:1px solid #1b2633;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
-    .card-bg{background:linear-gradient(rgba(11,15,20,.6),rgba(11,15,20,.6)),url('/background.png') center/cover no-repeat}
+    .card-bg{background:linear-gradient(rgba(11,15,20,.6),rgba(11,15,20,.6)),url('/background.png') center/cover no-repeat;border:none;box-shadow:var(--shadow);background-color:transparent}
     h1{font-size:clamp(28px,3.2vw,46px);line-height:1.15;margin:0 0 10px}
     h1 .accent{color:var(--gold)}
     h2{font-size:clamp(22px,2.2vw,30px);margin:0 0 12px}
@@ -81,6 +81,8 @@
     .kicker{font-size:.88rem;color:var(--muted);text-transform:uppercase;letter-spacing:.18em;margin-bottom:10px}
     ul.clean{list-style:none;padding:0;margin:0;display:grid;gap:8px}
     .pill{display:inline-block;background:#15202b;border:1px solid #22303c;border-radius:999px;padding:6px 10px;font-size:.9rem}
+    .pill.icon-only{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0}
+    .icon{width:20px;height:20px;fill:currentColor}
     .tiny{font-size:.9rem;color:var(--muted)}
     .muted{color:var(--muted)}
     .timeline{position:relative;padding-left:20px}
@@ -120,7 +122,7 @@
   {
     "@context":"https://schema.org",
     "@type":"Event",
-    "name":"Cardito Launch (Season 0 / Whitepaper)",
+    "name":"Cardito Season 0 Launch",
     "eventAttendanceMode":"https://schema.org/OnlineEventAttendanceMode",
     "eventStatus":"https://schema.org/EventScheduled",
     "startDate":"2025-10-31",
@@ -165,15 +167,15 @@
         </div>
       </div>
       <div class="card" aria-hidden="true">
-        <h2 style="margin-top:0">What is Cardito?</h2>
-        <div class="card card-bg" aria-hidden="true">
-        <ul class="clean">
-          <li>🎮 Real-time online matches with fair rules.</li>
-          <li>🏆 Seasonal XP program (Season 0) and tournaments.</li>
-          <li>💼 Wallet-ready economy (NFTs and Cardito Coin in Future).</li>
-          <li>🚀 Fast onboarding; play-first, wallet-optional approach.</li>
-        </ul>
-      </div>
+        <div class="card card-bg">
+          <h2 style="margin-top:0">What is Cardito?</h2>
+          <ul class="clean">
+            <li>🎮 Real-time online matches with fair rules.</li>
+            <li>🏆 Seasonal XP program (Season 0) and tournaments.</li>
+            <li>💼 Wallet-ready economy (NFTs and Cardito Coin in Future).</li>
+            <li>🚀 Fast onboarding; play-first, wallet-optional approach.</li>
+          </ul>
+        </div>
     </section>
 
     <!-- Features -->
@@ -199,45 +201,39 @@
     <section id="roadmap" class="section">
       <h2 style="margin-bottom:14px">Roadmap</h2>
     
-      <div class="grid-3">
-        <div class="card">
-          <div class="kicker">Season 0 — MVP & Community (Oct 2025)</div>
-          <ul class="clean tiny">
-            <li>Online multiplayer matches</li>
-            <li>In-game store: coins, avatars, cosmetic upgrades</li>
-            <li>Competitive XP; carries over to Season 1</li>
-            <li>Daily & weekly quests for XP</li>
-            <li>Global leaderboard + prizes for top players</li>
-          </ul>
-        </div>
+      <div class="card">
+        <div class="kicker">Timeline</div>
+        <div class="timeline">
     
-        <div class="card">
-          <div class="kicker">Season 1 — Custom Rooms & Crypto Rewards (Dec 2025)</div>
-          <ul class="clean tiny">
-            <li>Custom rooms with real crypto prizes (for eligible XP holders)</li>
-            <li>Hosts earn a share from their room’s prize pool</li>
-            <li>Special tournaments with featured rewards</li>
-          </ul>
-        </div>
-    
-        <div class="card">
-          <div class="kicker">Season 2 — Tradable Assets & Multi-Chain (Mar 2026)</div>
-          <ul class="clean tiny">
-            <li>Convert select in-game assets into tradable NFTs</li>
-            <li>Multi-chain support for broader access</li>
-            <li>Launch of the native Cardito token</li>
-          </ul>
-        </div>
-      </div>
-    
-      <div class="section" style="padding-top:20px">
-        <div class="card">
-          <div class="kicker">Timeline</div>
-          <div class="timeline">
-            <div class="titem"><strong>Oct 2025</strong> — Season 0</div>
-            <div class="titem"><strong>Dec 2025</strong> — Season 1</div>
-            <div class="titem"><strong>Mar 2026</strong> — Season 2</div>
+          <div class="titem">
+            <strong>Oct 2025 — Season 0 (MVP & Community)</strong>
+            <ul class="clean tiny" style="margin-top:6px">
+              <li>Online multiplayer matches</li>
+              <li>In-game store: coins, avatars, cosmetic upgrades</li>
+              <li>Competitive XP; carries over to Season 1</li>
+              <li>Daily & weekly quests for XP</li>
+              <li>Global leaderboard + prizes for top players</li>
+            </ul>
           </div>
+    
+          <div class="titem">
+            <strong>Dec 2025 — Season 1 (Custom Rooms & Crypto Rewards)</strong>
+            <ul class="clean tiny" style="margin-top:6px">
+              <li>Custom rooms with real crypto prizes (for eligible XP holders)</li>
+              <li>Hosts earn a share from their room’s prize pool</li>
+              <li>Special tournaments with featured rewards</li>
+            </ul>
+          </div>
+    
+          <div class="titem">
+            <strong>Mar 2026 — Season 2 (Tradable Assets & Multi-Chain)</strong>
+            <ul class="clean tiny" style="margin-top:6px">
+              <li>Convert select in-game assets into tradable NFTs</li>
+              <li>Multi-chain support for broader access</li>
+              <li>Launch of the native Cardito token</li>
+            </ul>
+          </div>
+    
         </div>
       </div>
     </section>
@@ -280,7 +276,7 @@
         </div>
         <div class="card">
           <h3>When is launch?</h3>
-          <p class="muted">We’re targeting October 2025 for the Season 0 milestone. Follow us on <a href="https://t.me/CarditoApp" target="_blank" rel="noopener">@CarditoApp</a> and <a href="https://x.com/carditoapp" target="_blank" rel="noopener">X</a> for updates.</p>
+          <p class="muted">We’re targeting October 2025 for the Season 0 milestone. Follow us on <a href="https://t.me/CarditoApp" target="_blank" rel="noopener">Telegram</a> and <a href="https://x.com/carditoapp" target="_blank" rel="noopener">X</a> for updates.</p>
         </div>
       </div>
     </section>
@@ -292,10 +288,22 @@
           <div class="kicker">Cardito</div>
           <p class="tiny">Classic card gameplay, modern experience. Built for fair play, speed, and community.</p>
           <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
-            <a class="pill" href="https://x.com/carditoapp" target="_blank" rel="noopener">X / Twitter</a>
-            <!-- <a class="pill" href="#" target="_blank" rel="noopener">Discord (soon)</a> -->
-            <a class="pill" href="mailto:info@cardito.app">info@cardito.app</a>
-            <a class="pill" href="mailto:support@cardito.app">support@cardito.app</a>
+            <a class="pill icon-only" href="https://x.com/carditoapp" target="_blank" rel="noopener" aria-label="X / Twitter">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 3L21 21M21 3L3 21" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+              </svg>
+            </a>
+            <a class="pill icon-only" href="https://t.me/CarditoApp" target="_blank" rel="noopener" aria-label="Telegram">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 4L3 11l6 2 2 6 3-4 5-11z" fill="currentColor"/>
+              </svg>
+            </a>
+            <a class="pill icon-only" href="mailto:info@cardito.app" aria-label="Email">
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M3 6h18v12H3z" fill="none" stroke="currentColor" stroke-width="2"/>
+                <path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </a>
           </div>
         </div>
         <div>
