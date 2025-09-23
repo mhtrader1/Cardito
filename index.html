@@ -12,8 +12,9 @@
 
   <!-- Favicon & Manifest -->
   <link rel="icon" href="/favicon.ico"/>
-  <link rel="icon" type="image/png" href="/CarditoCoin.png"/>
-  <link rel="apple-touch-icon" href="/CarditoCoin.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/CarditoCoin.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/CarditoCoin.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/CarditoCoin.png"/>
   <link rel="manifest" href="/manifest.json"/>
 
   <!-- Open Graph -->
@@ -55,10 +56,11 @@
     .wrap{max-width:var(--maxw);margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:space-between;gap:16px}
     .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
-    .logo-img{width:44px;height:44px;border-radius:50%;object-fit:cover;box-shadow:var(--shadow)}
+    /* show full logo image, no circular crop */
+    .logo-img{height:56px;width:auto;object-fit:contain;border-radius:0;box-shadow:none}
+    /* legacy class (not used for image now) */
     .logo{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #ffd666, #b8860b 55%, #6d4c00 100%);display:inline-grid;place-items:center;box-shadow:var(--shadow)}
     .logo span{font-weight:900;color:#000;filter:drop-shadow(0 1px 1px rgba(255,255,255,.35))}
-    .brand-name{font-weight:800;font-size:1.2rem;letter-spacing:.4px;color:var(--text)}
     nav{display:flex;gap:12px;flex-wrap:wrap}
     .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:999px;border:1px solid transparent;font-weight:700;cursor:pointer;transition:.2s all}
     .btn-ghost{background:transparent;border-color:#22303c}
@@ -93,7 +95,13 @@
     .hide{display:none!important}
     .error{color:var(--danger)}
     .ok{color:var(--success)}
-    @media (max-width:980px){.hero{grid-template-columns:1fr}.grid-3{grid-template-columns:1fr}.grid-2{grid-template-columns:1fr}.cols{grid-template-columns:1fr}}
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .grid-2{grid-template-columns:1fr}
+      .cols{grid-template-columns:1fr}
+      .logo-img{height:44px}
+    }
   </style>
 
   <!-- JSON-LD -->
@@ -125,14 +133,14 @@
   <div class="wrap">
     <!-- Header -->
     <header>
-      <a class="brand" href="/">
-        <img src="/logo.png" alt="Cardito logo" class="logo-img" width="44" height="44" />
-        <span class="brand-name">Cardito</span>
+      <a class="brand" href="/" aria-label="Cardito home">
+        <img src="/logo.png" alt="Cardito logo" class="logo-img" />
       </a>
       <nav>
         <a class="btn btn-ghost" href="#features">Features</a>
         <a class="btn btn-ghost" href="#roadmap">Roadmap</a>
         <a class="btn btn-ghost" href="#faq">FAQ</a>
+        <a class="btn btn-muted" href="https://t.me/CarditoApp" target="_blank" rel="noopener">@CarditoApp</a>
         <a class="btn btn-muted" href="https://x.com/carditoapp" target="_blank" rel="noopener">Follow on X</a>
         <!-- Discord later: <a class="btn btn-muted" href="https://discord.gg/..." target="_blank" rel="noopener">Join Discord</a> -->
       </nav>
