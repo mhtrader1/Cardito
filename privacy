@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Privacy Policy — Cardito</title>
+  <meta name="description" content="Privacy Policy for Cardito."/>
+  <link rel="canonical" href="https://cardito.app/privacy.html"/>
+  <meta name="theme-color" content="#0b0f14"/>
+  <style>
+    :root{--bg:#0b0f14;--card:#0f151c;--muted:#a4b0be;--text:#ecf0f1;--gold:#f1c40f;--maxw:900px;--radius:16px;}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px}
+    .card{background:var(--card);border:1px solid #1b2633;border-radius:var(--radius);padding:22px}
+    h1{margin:0 0 10px;font-size:clamp(26px,3vw,38px)}
+    h2{margin:22px 0 8px;font-size:clamp(18px,2.2vw,24px)}
+    p,li{color:#dbe2ea;line-height:1.7}
+    a{color:#17a2b8;text-decoration:none}
+    a:hover{text-decoration:underline}
+    .muted{color:var(--muted)}
+    footer{margin-top:18px;color:var(--muted);font-size:.9rem}
+    .back{display:inline-block;margin-top:10px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <h1>Privacy Policy</h1>
+      <p class="muted">Last updated: 23 September 2025</p>
+
+      <p>Cardito (“we”, “us”, or “our”) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our website at <a href="https://cardito.app">cardito.app</a> and related services (collectively, the “Services”).</p>
+
+      <h2>1. Who is the controller?</h2>
+      <p>The data controller is <strong>Cardito</strong>. You can contact us at <a href="mailto:info@cardito.app">info@cardito.app</a> or <a href="mailto:support@cardito.app">support@cardito.app</a>.</p>
+
+      <h2>2. What information we collect</h2>
+      <ul>
+        <li><strong>Contact Data:</strong> Email address you submit for Early Access/newsletters or when contacting support.</li>
+        <li><strong>Usage Data:</strong> Basic technical information from your browser (e.g., IP address, device type, pages visited). If we add analytics/cookies later, we will update this Policy and obtain consent where required.</li>
+        <li><strong>Gameplay/Account Data (future):</strong> In later releases, account identifiers, XP, match results, tournament entries, and optional wallet addresses may be processed to operate gameplay features.</li>
+      </ul>
+
+      <h2>3. Why we use your information (lawful bases)</h2>
+      <ul>
+        <li><strong>Provide and improve Services</strong> (performance of a contract or legitimate interests).</li>
+        <li><strong>Communications</strong> such as Early Access updates and announcements (consent or legitimate interests; you may unsubscribe at any time).</li>
+        <li><strong>Security & fraud prevention</strong> (legitimate interests/legal obligations).</li>
+        <li><strong>Compliance</strong> with applicable laws and requests from authorities (legal obligations).</li>
+      </ul>
+
+      <h2>4. Sharing your information</h2>
+      <p>We do not sell your personal data. We may share information with trusted providers who help us run the Services (e.g., email delivery, hosting). These providers are bound by contractual obligations and only process data on our instructions. We may also disclose information if required by law or to protect our rights and users.</p>
+
+      <h2>5. International transfers</h2>
+      <p>Your data may be processed outside your country. Where required, we use appropriate safeguards (e.g., EU Standard Contractual Clauses) to protect your information.</p>
+
+      <h2>6. Data retention</h2>
+      <p>We keep personal data only as long as necessary for the purposes described above, or as required by law. You may request deletion (see “Your rights”).</p>
+
+      <h2>7. Your rights (GDPR and similar)</h2>
+      <p>Depending on your location, you may have rights to access, correct, delete, restrict, or object to processing; to data portability; and to withdraw consent at any time. To exercise rights, contact <a href="mailto:info@cardito.app">info@cardito.app</a>. You may also lodge a complaint with your local supervisory authority.</p>
+
+      <h2>8. Cookies and tracking</h2>
+      <p>We currently use only essential technologies to operate the site. If we introduce analytics, advertising, or other optional cookies, we will update this Policy and, where required, present a consent banner allowing you to manage preferences.</p>
+
+      <h2>9. Children’s privacy</h2>
+      <p>Our Services are not directed to children under 13 (or the age required in your jurisdiction). We do not knowingly collect data from children. If you believe a child has provided personal data, please contact us to remove it.</p>
+
+      <h2>10. Security</h2>
+      <p>We implement appropriate technical and organizational measures to protect your information. No method of transmission or storage is 100% secure; we cannot guarantee absolute security.</p>
+
+      <h2>11. Third-party links</h2>
+      <p>Our Services may contain links to third-party sites. We are not responsible for their privacy practices. Please review their policies.</p>
+
+      <h2>12. Changes to this Policy</h2>
+      <p>We may update this Policy from time to time. We will post the updated version with a new “Last updated” date. Material changes may be communicated via the site or email where appropriate.</p>
+
+      <h2>13. Contact</h2>
+      <p>Questions? Contact us at <a href="mailto:info@cardito.app">info@cardito.app</a> or <a href="mailto:support@cardito.app">support@cardito.app</a>.</p>
+
+      <a class="back" href="/">← Back to Home</a>
+    </div>
+    <footer>© <span id="y"></span> Cardito</footer>
+  </div>
+  <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
+</body>
+</html>
