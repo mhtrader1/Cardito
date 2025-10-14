@@ -2,115 +2,112 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <title>Cardito — Play, Earn XP, Compete</title>
   <meta name="description" content="Cardito is a modern online card platform. Compete, earn XP, and join tournaments. Season 1 starts soon." />
-  <meta property="og:title" content="Cardito — Play, Earn XP, Compete" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://cardito.app/"/>
+
+  <!-- Favicon & Manifest -->
+  <link rel="icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="/CarditoCoin.png"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="/CarditoCoin.png"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="/CarditoCoin.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://cardito.app/"/>
+  <meta property="og:title" content="Cardito — Play, Earn XP, Compete"/>
   <meta property="og:description" content="Compete, earn XP, and join tournaments. Season 1 starts soon."/>
+  <meta property="og:image" content="https://cardito.app/logo.png"/>
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:site" content="@carditoapp"/>
   <meta name="twitter:title" content="Cardito — Play, Earn XP, Compete"/>
   <meta name="twitter:description" content="Compete, earn XP, and join tournaments. Season 1 starts soon."/>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Event",
-    "name":"Cardito Season 1 Launch",
-    "startDate":"2025-10-30",
-    "location":{
-      "@type":"VirtualLocation",
-      "url":"https://cardito.app"
-    },
-    "image":"https://cardito.app/og.png",
-    "description":"Join Cardito Season 1 — earn XP, compete globally, and unlock rewards."
-  }
-  </script>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="twitter:image" content="https://cardito.app/logo.png"/>
+
+  <!-- Colors -->
+  <meta name="theme-color" content="#0b0f14"/>
+
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --card:#0f151c;
+      --muted:#a4b0be;
+      --text:#ecf0f1;
+      --gold:#f1c40f;
+      --accent:#17a2b8;
+      --success:#2ecc71;
+      --danger:#e74c3c;
+      --maxw:1100px;
+      --radius:16px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,"Helvetica Neue",Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.6}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
+    .logo-img{height:100px;width:auto;object-fit:contain;border-radius:0;box-shadow:none}
+    .logo{width:44px;height:44px;border-radius:50%;background:radial-gradient(circle at 30% 30%, #ffd666, #b8860b 55%, #6d4c00 100%);display:inline-grid;place-items:center;box-shadow:var(--shadow)}
+    .logo span{font-weight:900;color:#000;filter:drop-shadow(0 1px 1px rgba(255,255,255,.35))}
+    nav{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:999px;border:1px solid transparent;font-weight:700;cursor:pointer;transition:.2s all}
+    .btn-ghost{background:transparent;border-color:#22303c}
+    .btn-ghost:hover{background:#0d141b}
+    .btn-primary{background:var(--gold);color:#000}
+    .btn-primary:hover{filter:brightness(.95)}
+    .btn-muted{background:#1b2530;color:var(--text);border-color:#263241}
+    .section{padding:40px 0}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .card{background:var(--card);border:1px solid #1b2633;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px}
+    .card-bg{background:linear-gradient(rgba(11,15,20,.5),rgba(11,15,20,.5)),url('/background.png') center/cover no-repeat;border:none;box-shadow:var(--shadow);background-color:transparent}
+    h1{font-size:clamp(28px,3.2vw,46px);line-height:1.15;margin:0 0 10px}
+    h1 .accent{color:var(--gold)}
+    h2{font-size:clamp(22px,2.2vw,30px);margin:0 0 12px}
+    p.lead{color:#dbe2ea;margin:0 0 18px;font-size:1.08rem}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+    .kicker{font-size:.88rem;color:var(--muted);text-transform:uppercase;letter-spacing:.18em;margin-bottom:10px}
+    ul.clean{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+    .pill{display:inline-block;background:#15202b;border:1px solid #22303c;border-radius:999px;padding:6px 10px;font-size:.9rem}
+    .trustbadges{display:flex;gap:10px;flex-wrap:wrap}
+    .tiny{font-size:.9rem;color:var(--muted)}
+    .muted{color:var(--muted)}
+  </style>
 </head>
 <body>
-  <header class="hero">
-    <div class="container">
-      <div class="kicker">Season 1 is coming</div>
-      <h1>Play Cardito, <span class="accent">Earn XP</span>, Join Tournaments</h1>
-      <p class="lead">Cardito is a modern online card platform. Compete with real players, earn XP, and get ready for official tournaments. Early players receive exclusive XP rewards.</p>
-      <a class="btn btn-primary" href="#early-access">Join Now</a>
-      <div class="trustbadges" aria-label="Supported networks" style="margin-top:8px;flex-wrap:wrap">
-        <span class="badge tiny">Sonic</span>
-        <span class="badge tiny">BNB</span>
-        <span class="badge tiny">Polygon</span>
-        <span class="badge tiny">Base</span>
-        <span class="badge tiny">Arbitrum</span>
-        <span class="badge tiny">Optimism</span>
-        <span class="badge tiny">Avalanche</span>
-      </div>
-      <p class="tiny" style="margin-top:10px">Multi-chain from day one — choose your preferred EVM network to play and earn.</p>
-    </div>
-  </header>
+  <div class="wrap">
+    <header>
+      <a class="brand" href="/" aria-label="Cardito home">
+        <img id="site-logo" src="/logo.png" alt="Cardito logo" class="logo-img" />
+      </a>
+      <nav>
+        <button class="btn btn-ghost" id="theme-toggle" type="button" aria-label="Toggle theme">🌙 / ☀️</button>
+        <a class="btn btn-ghost" href="#features">Features</a>
+        <a class="btn btn-ghost" href="#roadmap">Roadmap</a>
+        <a class="btn btn-ghost" href="#faq">FAQ</a>
+        <a class="btn btn-muted" href="https://t.me/CarditoApp" target="_blank" rel="noopener">Follow on Telegram</a>
+        <a class="btn btn-muted" href="https://x.com/carditoapp" target="_blank" rel="noopener">Follow on X</a>
+      </nav>
+    </header>
 
-  <section class="section light">
-    <div class="container">
-      <h2 style="margin-bottom:14px">Why players choose Cardito</h2>
-      <div class="features">
-        <div class="card">
-          <h3>XP First</h3>
-          <p class="muted">Season 1 focuses on XP — earn via matches, daily streaks, and friend invites. Compete in global and weekly leaderboards.</p>
+    <section class="section hero">
+      <div class="card">
+        <div class="kicker">Season 1 is coming</div>
+        <h1>Play Cardito, <span class="accent">Earn XP</span>, Join Tournaments</h1>
+        <p class="lead">Cardito is a modern online card platform. Compete with real players, earn XP, and prepare for the official tournaments of Season 1.</p>
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+          <a class="btn btn-primary" href="#early-access">Join Now</a> 
         </div>
-        <div class="card">
-          <h3>Fair Play</h3>
-          <p class="muted">Secure wallet-based accounts with anti-cheat systems. Your progress and assets belong to you.</p>
-        </div>
-        <div class="card">
-          <h3>Crypto-Ready</h3>
-          <p class="muted">Play across multiple chains. NFTs and CARDITO token integration will expand your in-game economy.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section dark">
-    <div class="container">
-      <h2 style="margin-bottom:14px">Roadmap</h2>
-
-      <div class="timeline">
-        <div class="entry">
-          <strong>Oct 2025 — Season 1 (MVP & Community)</strong>
-          <ul class="clean tiny" style="margin-top:6px">
-            <li>Online multiplayer matches</li>
-            <li>In-game store: coins, avatars, cosmetic upgrades</li>
-            <li>XP system with three earn paths: Matches, Daily Streak, Friend Invites</li>
-            <li>Leaderboards: Global (all-time XP) & Weekly</li>
-          </ul>
-        </div>
-
-        <div class="entry">
-          <strong>Dec 2025 — Season 2 (Custom Rooms & Create-to-Earn)</strong>
-          <ul class="clean tiny" style="margin-top:6px">
-            <li>Create custom game rooms (XP-gated). Hosts can earn a commission.</li>
-            <li>Keep accumulating XP — convertible to CARDITO later.</li>
-            <li>Featured tournaments and community events</li>
-          </ul>
-        </div>
-
-        <div class="entry">
-          <strong>Mar 2026 — Season 3 (Multi-Chain, Token & Revenue Share)</strong>
-          <ul class="clean tiny" style="margin-top:6px">
-            <li>Broader multi-chain support</li>
-            <li>Launch of the native CARDITO token</li>
-            <li><span class="badge tiny" style="font-weight:700">Final-Season Highlight:</span> A share of platform revenue distributed to CARDITO token holders</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="early-access" class="section light">
-    <div class="container">
-      <h2 style="margin-top:0">Join Now</h2>
-      <p class="muted">Sign up to receive updates about Season 1, XP rewards, and tournament news.</p>
-
-      <form class="inline" id="ea-form" action="https://formspree.io/f/mrbygbba" method="POST" novalidate>
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button class="btn btn-primary" type="submit">Subscribe</button>
-        <span class="tiny ok hide" id="thanks">Thanks! You're on the list.</span>
-        <div class="trustbadges" aria-label="Supported networks" style="margin-top:8px;flex-wrap:wrap">
+        <div class="trustbadges" style="margin-top:12px">
           <span class="badge tiny">Sonic</span>
           <span class="badge tiny">BNB</span>
           <span class="badge tiny">Polygon</span>
@@ -119,50 +116,136 @@
           <span class="badge tiny">Optimism</span>
           <span class="badge tiny">Avalanche</span>
         </div>
-      </form>
-    </div>
-  </section>
+        <p class="tiny" style="margin-top:10px">Multi-chain from the start — choose your preferred EVM network to play and earn XP.</p>
+      </div>
+      <div class="card card-bg" aria-hidden="true">
+        <h2 style="margin-top:0">What is Cardito?</h2>
+        <ul class="clean">
+          <li>🎮 Real-time online matches with fair rules.</li>
+          <li>🏆 Seasonal XP program (Season 1) and tournaments.</li>
+          <li>💼 Wallet-ready economy (NFTs and CARDITO token in future).</li>
+          <li>🚀 Play-first, wallet-optional onboarding for everyone.</li>
+        </ul>
+      </div>
+    </section>
 
-  <section class="section faq dark">
-    <div class="container">
-      <h2>FAQ</h2>
-      <div class="faq-grid">
-        <div>
-          <h3>Which blockchains do you support?</h3>
-          <p class="muted">Cardito is multi-chain from the start. Choose Sonic, BNB, Polygon, Base, Arbitrum, Optimism, or Avalanche — more to come.</p>
+    <section id="features" class="section">
+      <h2 style="margin-bottom:14px">Why players choose Cardito</h2>
+      <div class="grid-3">
+        <div class="card">
+          <h3>Fast & Fair</h3>
+          <p class="muted">Optimized matchmaking and anti-cheat for a smooth, competitive experience.</p>
         </div>
-        <div>
-          <h3>How do XP and leaderboards work?</h3>
-          <p class="muted">Earn XP by playing matches, keeping a daily streak, and inviting friends. Compete on the Global (all-time XP) and Weekly leaderboards. From Season 2, XP unlocks custom room creation; you can also hold XP for future conversion to CARDITO.</p>
+        <div class="card">
+          <h3>XP First</h3>
+          <p class="muted">Earn XP by playing matches, maintaining daily streaks, and inviting friends. Climb global and weekly leaderboards to win rewards.</p>
         </div>
-        <div>
-          <h3>How can I earn crypto?</h3>
-          <p class="muted">Players will be able to host custom rooms and tournaments with real prizes starting in Season 2. CARDITO token holders will share in platform revenue by the final season.</p>
+        <div class="card">
+          <h3>Future Benefits</h3>
+          <p class="muted">Hold your XP to unlock custom room creation in Season 2, convert it to CARDITO later, or earn prizes as a top XP holder.</p>
         </div>
       </div>
-      <p class="tiny">We’ll only use your email for Cardito updates. Contact: <a href="mailto:info@cardito.app">info@cardito.app</a></p>
-    </div>
-  </section>
+    </section>
 
-  <footer class="footer light">
-    <div class="container">
-      <p>© 2025 Cardito. All rights reserved.</p>
-    </div>
-  </footer>
+    <section id="roadmap" class="section">
+      <h2 style="margin-bottom:14px">Roadmap</h2>
+      <div class="card">
+        <div class="kicker">Timeline</div>
+        <div class="timeline">
+
+          <div class="titem">
+            <strong>Oct 2025 — Season 1 (MVP & Community)</strong>
+            <ul class="clean tiny" style="margin-top:6px">
+              <li>Online multiplayer matches</li>
+              <li>In-game store: coins, avatars, cosmetic upgrades</li>
+              <li>XP from matches, daily streaks, and friend invites</li>
+              <li>Leaderboards: Weekly & Global XP rankings</li>
+            </ul>
+          </div>
+
+          <div class="titem">
+            <strong>Dec 2025 — Season 2 (Custom Rooms & Create-to-Earn)</strong>
+            <ul class="clean tiny" style="margin-top:6px">
+              <li>Create custom rooms with XP entry; hosts can earn commissions</li>
+              <li>XP holders can unlock exclusive modes and earn event rewards</li>
+              <li>XP can be held for future conversion to CARDITO</li>
+            </ul>
+          </div>
+
+          <div class="titem">
+            <strong>Mar 2026 — Season 3 (Multi-Chain Expansion & Revenue Share)</strong>
+            <ul class="clean tiny" style="margin-top:6px">
+              <li>Full multi-chain deployment across leading EVM networks</li>
+              <li>Launch of the native CARDITO token</li>
+              <li><span class="badge tiny" style="font-weight:700">Final-Season Highlight:</span> A portion of platform revenue will be distributed among CARDITO token holders</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="early-access" class="section">
+      <div class="card">
+        <h2 style="margin-top:0">Join Now</h2>
+        <p class="muted">Sign up to receive updates about Season 1, XP rewards, and tournament news.</p>
+
+        <form class="inline" id="ea-form" action="https://formspree.io/f/mrbygbba" method="POST" novalidate>
+          <input required type="email" id="email" name="email" placeholder="you@example.com" aria-label="Email address" autocomplete="email"/>
+          <button class="btn btn-primary" type="submit" id="ea-btn">Notify me</button>
+          <span class="tiny ok hide" id="thanks">Thanks! You're on the list.</span>
+          <span class="tiny error hide" id="err">Oops—please try again.</span>
+        </form>
+
+        <div class="trustbadges" style="margin-top:12px">
+          <span class="badge tiny">Sonic</span>
+          <span class="badge tiny">BNB</span>
+          <span class="badge tiny">Polygon</span>
+          <span class="badge tiny">Base</span>
+          <span class="badge tiny">Arbitrum</span>
+          <span class="badge tiny">Optimism</span>
+          <span class="badge tiny">Avalanche</span>
+        </div>
+
+        <p class="tiny">We’ll only use your email for Cardito updates. Contact: <a href="mailto:info@cardito.app">info@cardito.app</a></p>
+      </div>
+    </section>
+
+    <section id="faq" class="section">
+      <h2 style="margin-bottom:14px">FAQ</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Do I need a crypto wallet to start?</h3>
+          <p class="muted">Yes. An empty crypto wallet is enough. Just sign the registration message—no transaction or fees—and you’re connected. Your in-game progress is tied to your wallet.</p>
+        </div>
+        <div class="card">
+          <h3>Which blockchains are supported?</h3>
+          <p class="muted">Cardito is multi-chain from day one: Sonic, BNB, Polygon, Base, Arbitrum, Optimism, and Avalanche — with more networks to come.</p>
+        </div>
+        <div class="card">
+          <h3>How does XP work?</h3>
+          <p class="muted">Earn XP by playing matches, keeping your daily streak, and inviting friends. XP helps you climb leaderboards and unlock future benefits such as creating custom rooms or converting XP to CARDITO.</p>
+        </div>
+        <div class="card">
+          <h3>When is launch?</h3>
+          <p class="muted">Season 1 launches October 2025. Follow us on <a href="https://t.me/CarditoApp" target="_blank" rel="noopener">Telegram</a> and <a href="https://x.com/carditoapp" target="_blank" rel="noopener">X</a> for updates.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="cols">
+        <div>
+          <div class="kicker">Cardito</div>
+          <p class="tiny">Modern card gameplay with blockchain rewards. Built for fairness, creativity, and community ownership.</p>
+        </div>
+      </div>
+      <p class="tiny" style="margin-top:16px">© <span id="y"></span> Cardito. All rights reserved.</p>
+    </footer>
+  </div>
 
   <script>
-    const form = document.getElementById('ea-form');
-    if(form){
-      form.addEventListener('submit', async e=>{
-        e.preventDefault();
-        const fd = new FormData(form);
-        const res = await fetch(form.action, {method:'POST', body:fd});
-        if(res.ok){
-          document.getElementById('thanks').classList.remove('hide');
-          form.reset();
-        }
-      });
-    }
+    document.getElementById('y').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
