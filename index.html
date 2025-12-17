@@ -96,7 +96,13 @@
     .timeline ul.clean li{color:var(--text)}
     html[data-theme="light"] .timeline ul.clean li{color:#2b3440}
     .badge{background:#101820;border:1px solid #1b2633;border-radius:10px;padding:8px 10px}
-    footer{padding:28px 0;border-top:1px solid #1b2633;margin-top:30px}
+    footer{padding:28px 0;border-top:1px solid rgba(255,255,255,.12);margin-top:30px;background:#1f2933;color:#e5e7eb}
+    footer a{color:#9ddcff}
+    footer a:hover{color:#ffffff}
+    footer .kicker{color:#cbd5e1}
+    footer .tiny{color:#cfd8e3}
+    footer .footer-legal{border-top:1px solid rgba(255,255,255,.15);margin-top:24px;padding-top:16px;font-size:.9rem;line-height:1.5;color:#cbd5e1}
+    footer .security{margin-top:8px;color:#9aa6b2}
     .cols{display:grid;grid-template-columns:2fr 1fr 1fr;gap:16px}
     input[type="email"]{width:100%;background:#0e151c;border:1px solid #243140;border-radius:10px;padding:12px;color:var(--text)}
     form.inline{display:flex;gap:10px;flex-wrap:wrap}
@@ -343,62 +349,78 @@
     </section>
 
     <!-- Footer -->
-    <footer>
-      <div class="cols">
-        <div>
-          <div class="kicker">Cardito</div>
-          <p class="tiny">Classic card gameplay, modern experience. Built for fair play, speed, and community.</p>
-          <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
-            <a class="pill icon-only" href="https://x.com/carditoapp" target="_blank" rel="noopener" aria-label="X / Twitter">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3 3L21 21M21 3L3 21" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
-              </svg>
-            </a>
-            <a class="pill icon-only" href="https://t.me/CarditoApp" target="_blank" rel="noopener" aria-label="Telegram">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M21 4L3 11l6 2 2 6 3-4 5-11z" fill="currentColor"/>
-              </svg>
-            </a>
-            <a class="pill icon-only" href="mailto:info@cardito.app" aria-label="Email">
-              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M3 6h18v12H3z" fill="none" stroke="currentColor" stroke-width="2"/>
-                <path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/>
-              </svg>
-            </a>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="cols">
+          <!-- Brand -->
+          <div>
+            <div class="kicker">Cardito</div>
+            <p class="tiny">
+              Cardito is a registered entity in Denmark. This website represents an online
+              skill-based card game platform. Built for fair play, speed, and community.
+            </p>
+
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:12px">
+              <a class="pill icon-only" href="https://x.com/carditoapp" target="_blank" rel="noopener" aria-label="X / Twitter">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 3L21 21M21 3L3 21" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <a class="pill icon-only" href="https://t.me/CarditoApp" target="_blank" rel="noopener" aria-label="Telegram">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M21 4L3 11l6 2 2 6 3-4 5-11z" fill="currentColor"/>
+                </svg>
+              </a>
+              <a class="pill icon-only" href="mailto:info@cardito.app" aria-label="Email">
+                <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M3 6h18v12H3z" fill="none" stroke="currentColor" stroke-width="2"/>
+                  <path d="M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <div class="kicker">Company</div>
+            <ul class="clean tiny">
+              <li><a href="/privacy.html">Privacy Policy</a></li>
+              <li><a href="/terms.html">Terms of Use</a></li>
+              <li><a href="#roadmap">Roadmap</a></li>
+            </ul>
+          </div>
+
+          <!-- Resources -->
+          <div>
+            <div class="kicker">Resources</div>
+            <ul class="clean tiny">
+              <li><a href="#faq">FAQ</a></li>
+              <li><a href="#early-access">Early Access</a></li>
+              <li><a href="https://x.com/carditoapp" target="_blank" rel="noopener">Announcements</a></li>
+            </ul>
           </div>
         </div>
-        <div>
-          <div class="kicker">Company</div>
-          <ul class="clean tiny">
-            <li><a href="/privacy.html">Privacy Policy</a></li>
-            <li><a href="/terms.html">Terms of Use</a></li>
-            <li><a href="#roadmap">Roadmap</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="kicker">Resources</div>
-          <ul class="clean tiny">
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#early-access">Early Access</a></li>
-            <li><a href="https://x.com/carditoapp" target="_blank" rel="noopener">Announcements</a></li>
-          </ul>
+
+        <!-- Legal strip -->
+        <div class="footer-legal">
+          <div>
+            <strong>Legal entity:</strong> Cardito ·
+            <strong>CVR:</strong> 44777568 ·
+            <strong>Office:</strong> Roskilde, Denmark
+          </div>
+
+          <div class="security">
+            Security reminder: Cardito will never DM you for private keys.
+            Always verify URLs and beware of impersonators.
+          </div>
+
+          <div style="margin-top:8px">
+            © <span id="y"></span> Cardito. All rights reserved.
+          </div>
         </div>
       </div>
-      <p class="tiny" style="margin-top:16px">© <span id="y"></span> Cardito. All rights reserved.</p>
-      <p class="tiny" style="margin-top:6px">
-        <strong>Legal entity:</strong> Cardito ·
-        <strong>CVR:</strong> 44777568 ·
-        <strong>Office:</strong> Roskilde, Denmark ·
-      </p>
-
-      <p class="tiny" style="margin-top:6px;color:var(--muted)">
-        Cardito is a registered entity in Denmark. This website represents an online skill-based card game platform.
-      </p>
-
-      <p class="tiny" style="margin-top:6px;color:var(--muted)">
-        Security reminder: Cardito will never DM you for private keys. Beware of impersonators — always check URLs.
-      </p>
     </footer>
+
   </div>
 
   <script>
